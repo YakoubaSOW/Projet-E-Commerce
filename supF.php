@@ -1,5 +1,5 @@
 <?php
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 $idf = $_GET["idf"];
 $req = "delete from favoris where idf = $idf";
 mysqli_query($id, $req);

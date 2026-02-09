@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 if(isset($_POST["bout"])){
     $mail = $_POST["mail"];
     $mdp = $_POST["mdp"];

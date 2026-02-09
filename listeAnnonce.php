@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 $idu = $_SESSION["idu"]
 ?>
 <!DOCTYPE html>

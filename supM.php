@@ -1,5 +1,5 @@
 <?php
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 $idm = $_GET["idm"];
 $req = "delete from message where idm = $idm";
 mysqli_query($id, $req);

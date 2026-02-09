@@ -1,5 +1,5 @@
 <?php
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 $ida = $_GET["ida"];
 $req = "delete from annonce where ida = $ida";
 mysqli_query($id, $req);

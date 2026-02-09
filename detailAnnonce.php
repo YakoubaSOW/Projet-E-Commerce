@@ -1,7 +1,7 @@
 <?php
 session_start();
 $idu = $_SESSION["idu"];
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 if(!isset($_SESSION["idu"])){//si la variable de session mail n'existe pas
     header("location:connexion.php");
 }

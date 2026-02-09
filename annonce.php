@@ -2,7 +2,7 @@
 session_start();
 $idu = $_SESSION["idu"];
 $mail = $_SESSION["mail"];
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 if(isset($_POST["bout"])){
     $produit = $_POST["produit"];
     $description = $_POST["description"];

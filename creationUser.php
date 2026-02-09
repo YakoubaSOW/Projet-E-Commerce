@@ -1,5 +1,5 @@
 <?php
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 if(isset($_POST["bout"])){
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];

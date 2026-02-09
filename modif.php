@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id = mysqli_connect("localhost:3307","root","","leboncoin");
+include("connect.php");
 if(isset($_POST["bout"])){
     $ida = $_POST["ida"];
     $idu = $_POST["idu"];
@@ -55,8 +55,8 @@ $ligne2 = mysqli_fetch_assoc($res2);
         <label for="">Photo du produit</label>
         <input class="form-control" type="file" name="photo" value="<?=$ligne2["photo"]?>">
 
-        label for="">Catégorie</label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="categorie" value="<?=$ligne2["description"]?>" required>
+        <label for="">Catégorie</label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="categorie" value="<?=$ligne2["categorie"]?>" required>
                     <?php
                         $req = "select distinct categorie from annonce";
                         $res = mysqli_query($id,$req);
